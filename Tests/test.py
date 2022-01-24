@@ -1,6 +1,6 @@
 import unittest
 
-from Utils.utils import conversion_Rib_to_compte
+from Utils.rib_to_compte import conversion_Rib_to_compte
 
 class Test(unittest.TestCase):
 
