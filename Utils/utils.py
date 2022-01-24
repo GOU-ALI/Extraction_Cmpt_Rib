@@ -1,7 +1,6 @@
 
-#le rib est tjr en 24 caracteres !
 def conversion_Rib_to_compte(rib):
-    if len(rib) == 24 :
+    if len(rib) == 24 :                                       #le rib est tjr en 24 caracteres
 
         agence = rib[8:12]
         serie = rib[13:22]
