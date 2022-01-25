@@ -1,6 +1,6 @@
 
 def conversion_Rib_to_compte(rib):
-    if len(rib) == 24 :                                       #le rib est tjr en 24 caracteres
+    if len(rib) == 24 :                                       # le rib est tjr en 24 caracteres
 
         agence = rib[8:12]
         serie = rib[13:22]
@@ -89,8 +89,4 @@ def conversion_Rib_to_compte(rib):
     return final
 
 
-if __name__ == '__main__':
-#007780000115500030610689
-#007780000000500011500067
-    print(conversion_Rib_to_compte("007780000000500011509864"))
 
