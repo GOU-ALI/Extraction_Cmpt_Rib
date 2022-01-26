@@ -5,11 +5,17 @@ def conversion_Rib_to_compte(rib):
         agence = rib[8:12]
         serie = rib[13:22]
         A = rib[6:8]
-        T = serie[3:]
         M = agence[0]
-        L = agence[1:]
+        #L = agence
+        N = agence[1:]
+        O = M
+        Q = N
+        #R = serie
+        S = serie[0:3]
+        P = S
+        T = serie[3:]
         U = T
-        V = L + M
+        V = O + P
         J = 13
         K = 16
 
@@ -23,10 +29,10 @@ def conversion_Rib_to_compte(rib):
 
         if X == "MAD":
             Y = A
-        else : Y = L
+        else : Y = Q
 
         if X == "MAD":
-            Z = L
+            Z = Q
         else : Z = A
 
         AA = U
@@ -45,24 +51,19 @@ def conversion_Rib_to_compte(rib):
         AN = int(AC[10])*(J-11) + AM
 
         AO = 0
-        if W == 11 :
-            AO = AN
-        else : AO = int(AC[11])*(K-12) + AN
-
         AP = 0
-        if W == 11 :
-            AP = AO
-        else : AP = int(AC[12])*(K-13) + AO
-
         AQ = 0
-        if W == 11 :
-            AQ = AP
-        else : AQ = int(AC[13])*(K-14) + AP
-
         AR = 0
         if W == 11 :
+            AO = AN
+            AP = AO
+            AQ = AP
             AR = AQ
-        else : AR= int(AC[14])*(K-15) + AR
+        else :
+            AO = int(AC[11])*(K-12) + AN
+            AP = int(AC[12])*(K-13) + AO
+            AQ = int(AC[13])*(K-14) + AP
+            AR = int(AC[14])*(K-15) + AQ
 
         AS = AR
         AT = AS % 11
@@ -87,6 +88,4 @@ def conversion_Rib_to_compte(rib):
         return "LE CODE RIB EST INCORRECT"
 
     return final
-
-
 
